@@ -18,6 +18,8 @@ typedef struct printer
 } printer;
 
 int _printf(const char *format, ...);
+int _printstr(va_list);
+int _putchar(char c);
 
 #endif /* MAIN_H */
 
