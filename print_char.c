@@ -3,17 +3,16 @@
 #include <stdlib.h>
 
 /**
- * _print_char - prints a char
- * @av: format of char
- * @format: format
- * Return: Number of char for printf
+ * print_char - prints a char
+ * @c: character to print
+ * Return: Number of char
  */
-int _print_char(va_list av)
+int print_char(va_list c)
 {
 	unsigned char my_char;
 
-	my_char = (va_arg(av, int));
-	_putchar(my_char);
+	my_char = (va_arg(c, int));
+	putchar(my_char);
 
 	return (1);
 }

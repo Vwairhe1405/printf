@@ -1,20 +1,24 @@
 #include "main.h"
-
+#include <stdio.h>
+#include <stdlib.h>
 /**
- *_printstr - Prints a string
- *@av: string format
- *@format: format string
- *Return: number of str for print
+ * print_string - writes the character c to stdout
+ * @s: The string to print
+ *
+ * Return: 1.
  */
-int _printstr(va_list av)
+int print_string(va_list s)
 {
-	char *str = va_arg(av, char *);
-	int count;
-		if (str == NULL)
-			str = "(null)";
-		for (count = 0; str[count]; count++)
-		{
-			_putchar(str[count]);
-		}
-		return (count);
+	char *my_string;
+	int i = 0;
+
+	my_string = va_arg(s, char *);
+	if (my_string == NULL)
+		my_string = "(null)";
+	while (my_string[i])
+	{
+		_putchar(my_string[i]);
+			i++;
+	}
+	return (i);
 }
