@@ -14,7 +14,7 @@ int _printstr(va_list av)
 			str = "(null)";
 		for (count = 0; str[count]; count++)
 		{
-			_putchar (str[count]);
+			_putchar(str[count]);
 		}
 		return (count);
 }
